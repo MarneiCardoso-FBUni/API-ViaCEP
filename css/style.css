@@ -1,0 +1,145 @@
+/* Fonte */
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
+
+:root {    
+    /* Paleta de cores */
+    --cor-principal: #5647ff;
+    --cor-01: #f9f9f9;
+    --cor-02: #f5f8fa;
+    --cor-03: #e8ecee;
+    --cor-04: #cbd6e2;
+    --cor-05: #9caaba;
+    --cor-06: #232323;
+    --cor-07: #000000c9;
+    --cor-08: #ff0040;
+
+    /* Fonte */
+    --fonte-principal: 'Montserrat', sans-serif;
+}
+
+/* Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: var(--fonte-principal);
+    font-size: 16px;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    background-color: var(--cor-04);
+    color: var(--cor-06);
+
+    width: 90vw;
+    margin: 2rem auto;
+}
+
+h1, h2, h3, h4, h5, h6, p {
+    margin: 1rem 0;
+}
+
+main {
+    width: 32rem;
+    margin: 0 auto;
+    padding: 2rem;
+    background-color: var(--cor-01);
+    border: solid 1px var(--cor-05);
+    border-radius: 0.5rem;
+}
+
+hr {
+    margin: 1rem 0 2rem;
+    border: none;
+    border-bottom: solid 1px var(--cor-04);
+}
+
+input {
+    background-color: var(--cor-01);
+    border: solid 1px var(--cor-04);
+    border-radius: 0.2rem;
+    padding: 0.2rem 0.5rem;
+    margin: 0.2rem 0;
+    width: 100%;
+    min-height: 2rem;
+    height: 100%;
+    outline: var(--cor-05);
+
+    &:disabled {
+        background-color: var(--cor-03);
+        cursor: not-allowed;
+        cursor: not-allowed;
+    }
+}
+
+button {
+    color: var(--cor-02);
+    background-color: var(--cor-principal);
+    border: none;
+    border-radius: 0.2rem;
+    padding: 0.6rem 1rem;
+    min-height: 2rem;
+    height: 100%;
+    transition: all 0.5s ease;
+
+    &:hover {
+        cursor: pointer;
+        color: var(--cor-06);
+        background-color: var(--cor-04);
+    }
+}
+
+/* ===== Classes ===== */
+.informa-cep {
+    display: grid;
+    grid-template-columns: auto auto auto;
+    align-items: center;
+    gap: 1rem;
+}
+
+.dados input {
+    margin-bottom: 1rem;
+}
+
+form span {
+    color: var(--cor-08);
+}
+
+.input-group {
+    display: flex;
+    gap: 1rem;
+}
+
+.campo {
+    display: flex;
+    flex-direction: column;
+}
+
+.campo-70 {
+    flex: 0 0 70%;
+}
+
+.toast {
+    position: fixed;
+    left: 50%;
+    bottom: 3rem;
+    transform: translate(-50%, 3rem);
+    background-color: var(--cor-07);
+    color: var(--cor-02);
+    padding: 2rem 2rem;
+    border-radius: 0.3rem;
+    box-shadow: 0 0 0.625rem var(--cor-07);
+    opacity: 0;
+    transition: all 0.5s ease;
+    z-index: -100;
+}
+
+/* animação "subindo" */
+.toast.show {
+    z-index: 1000;
+    opacity: 1;
+    transform: translate(-50%, 0);
+}
