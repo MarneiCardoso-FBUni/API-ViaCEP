@@ -15,16 +15,14 @@
 
         <form id="formularioCEP">
             <div class="informa-cep">
-                <label for="cep">Informe o CEP <span>*</span></label>
-                <input type="text" id="cep" maxlength="8" placeholder="apenas números">
+                <label for="cep">Informe o CEP</label>
+                <input type="text" id="cep">
 
                 <button type="submit">Pesquisar</button>
             </div>
-        </form>
 
-        <hr>
+            <hr>
 
-        <form id="formularioEndereco">
             <div class="dados">
                 <label for="logradouro">Logradouro</label>
                 <input type="text" id="logradouro" disabled>
@@ -32,39 +30,25 @@
                 <label for="bairro">Bairro</label>
                 <input type="text" id="bairro" disabled>
 
-                <div class="input-group">
-                    <div class="campo campo-70">
-                        <label for="localidade">Cidade</label>
-                        <input type="text" id="localidade" disabled>
-                    </div>
+                <label for="localidade">Cidade</label>
+                <input type="text" id="localidade" disabled>
 
-                    <div class="campo">
-                        <label for="estado">Estado (UF)</label>
-                        <input type="text" id="estado" disabled>
-                    </div>
-                </div>
+                <label for="estado">Estado</label>
+                <input type="text" id="estado" disabled>
 
-                <div class="input-group">
-                    <div class="campo campo-70">
-                        <label for="regiao">Região</label>
-                        <input type="text" id="regiao" disabled>
-                    </div>
+                <label for="regiao">Região</label>
+                <input type="text" id="regiao" disabled>
 
-                    <div class="campo">
-                        <label for="numero">Número <span>*</span></label>
-                        <input type="text" id="numero">
-                    </div>
-                </div>
+                <label for="numero">Número</label>
+                <input type="text" id="numero">
 
                 <label for="complemento">Complemento</label>
                 <input type="text" id="complemento">
             </div>
 
             <!-- Botão de envio -->
-            <button type="button" id="btnEndereco">Enviar</button>
+            <button type="button">Enviar</button>
         </form>
-
-        <div class="toast"></div>
     </main>
 </body>
 <!-- JS -->
